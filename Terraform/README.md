@@ -1,5 +1,58 @@
 ## Provisioning Terraform Resources
 
+**Directory Structure**
+```
+ ── Terraform
+    ├── ecs
+    │   ├── cluster
+    │   │   ├── backend-provider.tf
+    │   │   ├── locals.tf
+    │   │   ├── main.tf
+    │   │   ├── outputs.tf
+    │   │   ├── terraform.tfvars
+    │   │   └── variable.tf
+    │   ├── ecr
+    │   │   ├── backend-provider.tf
+    │   │   ├── locals.tf
+    │   │   ├── main.tf
+    │   │   ├── output.tf
+    │   │   ├── terraform.tfvars
+    │   │   └── variables.tf
+    │   ├── loadbalancer
+    │   │   ├── backend-provider.tf
+    │   │   ├── data.tf
+    │   │   ├── locals.tf
+    │   │   ├── main.tf
+    │   │   ├── output.tf
+    │   │   ├── terraform.tfvars
+    │   │   └── variables.tf
+    │   └── service
+    │       ├── backend-provider.tf
+    │       ├── container_definition.json
+    │       ├── data.tf
+    │       ├── locals.tf
+    │       ├── service.tf
+    │       ├── terraform.tfvars
+    │       └── variable.tf
+    ├── lambda-http-api
+    │   ├── backend_provider.tf
+    │   ├── data.tf
+    │   ├── http_api_gateway.tf
+    │   ├── lambda_function.tf
+    │   ├── locals.tf
+    │   ├── outputs.tf
+    │   ├── terraform.tfvars
+    │   └── variables.tf
+    ├── README.md
+    └── vpc
+        ├── backend-provider.tf
+        ├── locals.tf
+        ├── main.tf
+        ├── output.tf
+        ├── terraform.tfvars
+        └── variables.tf
+```
+
 To provision any group of resources be it `vpc`,`ecs cluster`,`lambda function` following are basic set of commands that needs to followed.
 
 - First we need to get inside the directory. Let take an example of **VPC**
