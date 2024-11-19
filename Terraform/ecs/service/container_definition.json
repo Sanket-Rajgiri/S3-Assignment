@@ -1,0 +1,32 @@
+[
+  {
+      "name": "s3-listing-service",
+      "image": "865231810780.dkr.ecr.us-east-1.amazonaws.com/s3-listing:latest",
+      "essential": true,
+      "logConfiguration": {
+          "logDriver": "awslogs",
+          "options": {
+              "awslogs-group": "/ecs/prod/s3-listing-service",
+              "awslogs-region": "ap-south-1",
+              "awslogs-create-group": "true",
+              "awslogs-stream-prefix": "ecs"
+          }
+      },
+      "portMappings": [
+          {
+              "containerPort": 5000,
+              "hostPort": 5000
+          }
+      ],
+      "secrets": [
+          {
+              "name": "AWS_REGION",
+              "valueFrom": "/prod/AWS_REGION"
+          },
+          {
+              "name": "BUCKET_NAME",
+              "valueFrom": "/prod/S3_BUCKET_NAME"
+          }
+      ]
+  }
+]
