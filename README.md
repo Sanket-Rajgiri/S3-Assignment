@@ -97,3 +97,7 @@ docker run --env-file .env -p 8000:8000 your-image-name
 ## Terraform Infrastructure Provisioning
 
 You can find detailed document inside `Terraform` to provision resources.
+
+## Demo Video Link 
+
+Due to filesize restrictions, upload compressed video to repository. If any issues in viewing content, please [refer here](https://drive.google.com/file/d/1r_goeLEOSWORcHfPmuAO_SQc4j5YBXo1/view?usp=drive_link)
